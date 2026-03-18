@@ -1,0 +1,293 @@
+.shell {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 56px 0 80px;
+}
+
+.heroGrid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: minmax(0, 1.45fr) minmax(300px, 0.85fr);
+  align-items: stretch;
+}
+
+.heroCopy,
+.statusCard,
+.metricCard,
+.roadmapCard {
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: rgba(255, 250, 240, 0.82);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 28px 60px rgba(19, 33, 27, 0.08);
+}
+
+.heroCopy {
+  padding: 36px;
+}
+
+.kicker,
+.sectionHeading span,
+.metricGrain,
+.roadmapPhase,
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-plex-mono), monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.kicker,
+.sectionHeading span,
+.roadmapPhase {
+  color: var(--accent-deep);
+}
+
+.title {
+  margin-top: 16px;
+  max-width: 12ch;
+  font-size: clamp(3rem, 6vw, 5.6rem);
+  line-height: 0.96;
+  letter-spacing: -0.06em;
+  text-wrap: balance;
+}
+
+.lede {
+  margin-top: 22px;
+  max-width: 58ch;
+  font-size: 1.08rem;
+  line-height: 1.75;
+  color: var(--ink-soft);
+}
+
+.promptCard {
+  margin-top: 28px;
+  padding: 20px 22px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, rgba(216, 234, 220, 0.92), rgba(240, 212, 154, 0.72));
+  border: 1px solid rgba(19, 33, 27, 0.08);
+}
+
+.promptHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  color: var(--accent-deep);
+  font-family: var(--font-plex-mono), monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.badge {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(255, 250, 240, 0.7);
+  letter-spacing: 0.06em;
+}
+
+.promptText {
+  margin-top: 14px;
+  font-size: 1.4rem;
+  line-height: 1.45;
+  font-weight: 500;
+}
+
+.questionRail {
+  display: grid;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.questionChip {
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 250, 240, 0.58);
+  color: var(--ink-soft);
+}
+
+.statusCard {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 28px;
+}
+
+.statusHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+}
+
+.statusHeader span:first-child {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.statusLive,
+.statusIdle {
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-family: var(--font-plex-mono), monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.statusLive {
+  background: rgba(75, 166, 99, 0.14);
+  color: #1f6a39;
+}
+
+.statusIdle {
+  background: rgba(216, 107, 42, 0.14);
+  color: var(--accent-deep);
+}
+
+.statusList {
+  display: grid;
+  gap: 16px;
+}
+
+.statusList div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.statusList dt {
+  color: var(--ink-soft);
+}
+
+.statusList dd {
+  font-weight: 600;
+  text-align: right;
+}
+
+.statusNote {
+  line-height: 1.7;
+  color: var(--ink-soft);
+}
+
+.section {
+  margin-top: 28px;
+}
+
+.sectionHeading {
+  margin-bottom: 18px;
+}
+
+.sectionHeading h2 {
+  margin-top: 10px;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.metricGrid,
+.roadmapGrid {
+  display: grid;
+  gap: 18px;
+}
+
+.metricGrid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.metricCard {
+  padding: 24px;
+}
+
+.metricTop {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: baseline;
+}
+
+.metricLabel {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.metricGrain {
+  color: var(--accent-deep);
+}
+
+.metricDescription {
+  margin-top: 14px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+}
+
+.metricFormula {
+  margin-top: 18px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  background: rgba(19, 33, 27, 0.05);
+  font-family: var(--font-plex-mono), monospace;
+  font-size: 0.9rem;
+}
+
+.metricTables {
+  margin-top: 16px;
+  color: var(--accent-deep);
+  font-size: 0.95rem;
+}
+
+.roadmapGrid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.roadmapCard {
+  padding: 24px;
+  min-height: 180px;
+}
+
+.roadmapCard p {
+  margin-top: 18px;
+  line-height: 1.75;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 980px) {
+  .heroGrid,
+  .metricGrid,
+  .roadmapGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .shell {
+    width: min(100% - 20px, 1180px);
+    padding: 24px 0 48px;
+  }
+
+  .heroCopy,
+  .statusCard,
+  .metricCard,
+  .roadmapCard {
+    padding: 22px;
+    border-radius: 22px;
+  }
+
+  .promptHeader,
+  .metricTop,
+  .statusHeader,
+  .statusList div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .statusList dd {
+    text-align: left;
+  }
+}

@@ -2,6 +2,61 @@
 
 Build a data analyst assistant that turns business questions into trustworthy answers with SQL, charts, and short written explanations.
 
+## Current status
+
+The first PR sets up the project foundation:
+
+- `frontend/` runs a Next.js app with a product-style landing page and environment-based API wiring.
+- `backend/` runs a FastAPI app with health and metric catalog endpoints.
+- `docker-compose.yml` starts a local Postgres instance for warehouse work.
+- The first six approved metrics are now explicit: revenue, orders, average order value, repeat rate, refund rate, and review score.
+
+## Repo layout
+
+- `frontend/`: Next.js application shell
+- `backend/`: FastAPI API and semantic metric catalog
+- `Build-Plan.md`: phased implementation plan
+- `docker-compose.yml`: local Postgres for development
+
+## Local setup
+
+1. Copy `.env.example` to `.env`.
+2. Copy `frontend/.env.local.example` to `frontend/.env.local`.
+3. Start Postgres:
+
+   ```bash
+   docker compose up -d
+   ```
+
+4. Create a Python virtual environment and install backend dependencies:
+
+   ```bash
+   python -m venv .venv
+   .venv\Scripts\activate
+   python -m pip install -r backend/requirements.txt
+   ```
+
+5. Start the API from the repo root:
+
+   ```bash
+   python -m uvicorn backend.app.main:app --reload --port 8000
+   ```
+
+6. In a second terminal, start the frontend:
+
+   ```bash
+   cd frontend
+   npm install
+   npm run dev
+   ```
+
+7. Open `http://localhost:3000`.
+
+## First API endpoints
+
+- `GET /api/health`
+- `GET /api/metrics`
+
 ## Why build this
 
 - It combines classic analytics skills with LLM product work.
