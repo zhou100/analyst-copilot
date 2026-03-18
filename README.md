@@ -11,8 +11,15 @@ The first PR sets up the project foundation:
 - `docker-compose.yml` starts a local Postgres instance for warehouse work.
 - The first six approved metrics are now explicit: revenue, orders, average order value, repeat rate, refund rate, and review score.
 
+## Source of truth
+
+- [`PRD.md`](PRD.md) is the active product and system-design spec.
+- [`Build-Plan.md`](Build-Plan.md) is the phased execution checklist derived from the PRD.
+- Going forward, code changes should follow the PRD and update it when behavior or architecture changes materially.
+
 ## Repo layout
 
+- `PRD.md`: product requirements and system design
 - `frontend/`: Next.js application shell
 - `backend/`: FastAPI API and semantic metric catalog
 - `Build-Plan.md`: phased implementation plan

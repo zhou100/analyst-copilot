@@ -1,5 +1,7 @@
 # Build Plan
 
+This build plan is the execution checklist for [`PRD.md`](PRD.md). If product scope, architecture, or core workflows change, update the PRD first or in the same change.
+
 ## Target timeline
 
 - 8-10 focused build days for a strong MVP
